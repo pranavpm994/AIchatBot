@@ -65,7 +65,7 @@ export default function Home() {
             botAI
           </h1>
         </div>
-        <div className="flex-1 overflow-hidden  bg-gray-900">
+        <div className="flex-1 overflow-y-auto bg-gray-900">
           <div className="flex items-center mb-4">
             <div className="flex-1 space-y-4 p-6 text-white">
               {/* flex space-y-4 grow overflow-y-auto flex-col p-6 pt-24 max-h-[screen] bg-gray-900 */}
