@@ -59,13 +59,13 @@ export default function Home() {
   };
   return (
     <div className="bg-indigo-50 flex flex-col items-center justify-center">
-      <div className="container flex min-h-screen flex-col">
+      <div className="container flex h-[calc(100dvh)] flex-col">
         <div className="flex sticky top-0 left-0 right-0 items-center bg-gray-900 justify-center">
           <h1 className="bg-gradient-to-r from-blue-500 to-red-500 text-center text-transparent bg-clip-text w-screen py-3 font-bold text-6xl">
             botAI
           </h1>
         </div>
-        <div className="flex-1 overflow-y-auto  bg-gray-900">
+        <div className="flex-1 overflow-hidden  bg-gray-900">
           <div className="flex items-center mb-4">
             <div className="flex-1 space-y-4 p-6 text-white">
               {/* flex space-y-4 grow overflow-y-auto flex-col p-6 pt-24 max-h-[screen] bg-gray-900 */}
