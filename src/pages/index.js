@@ -16,7 +16,7 @@ export default function Home() {
   const scrollRef = useRef(null);
   useEffect(() => {
     scrollRef.current.scrollIntoView();
-  }, [inputValue, responseMsg]);
+  }, [isLoading,responseMsg]);
   const handleSubmit = (event) => {
     event.preventDefault();
     setChatLog((prevChatLog) => [
@@ -58,16 +58,16 @@ export default function Home() {
       });
   };
   return (
-    <div className="bg-indigo-50 flex flex-col items-center justify-center">
-      <div className="container flex h-[calc(100dvh)] flex-col">
-        <div className="flex sticky top-0 left-0 right-0 items-center bg-gray-900 justify-center">
+    <div className="bg-indigo-50 flex flex-col">
+      <div className="flex h-[calc(100dvh)] flex-col items-center">
+        <div className="flex top-0 left-0 right-0 w-full xl:w-96 md:w-96 2xl:w-96 bg-gray-900">
           <h1 className="bg-gradient-to-r from-blue-500 to-red-500 text-center text-transparent bg-clip-text w-screen py-3 font-bold text-6xl">
             botAI
           </h1>
         </div>
-        <div className="flex-1 overflow-y-auto bg-gray-900">
+        <div className="flex-1 overflow-y-auto w-full xl:w-96 md:w-96 2xl:w-96 bg-gray-900">
           <div className="flex items-center mb-4">
-            <div className="flex-1 space-y-4 p-6 text-white">
+            <div className="flex-1 space-y-4 pl-6 pr-6 text-white">
               {/* flex space-y-4 grow overflow-y-auto flex-col p-6 pt-24 max-h-[screen] bg-gray-900 */}
               {chatLog.map((message, index) => (
                 <div
@@ -96,12 +96,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="flex items-center border-t p-2">
-          <div className="flex-none fixed bottom-0 left-0 right-0 p-2 pt-1 bg-gray-900">
+        <div class="flex w-full xl:w-96 md:w-96 2xl:w-96">
+          <div className="flex-1 bottom-0 left-0 right-0 p-2 pt-1 bg-gray-900">
             <form onSubmit={handleSubmit}>
-              <div className="flex rounded-lg border border-gray-900 bg-gray-800">
+              <div className="flex space-x-2 rounded-lg border border-gray-900">
                 <input
-                  className="grow px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none"
+                  className="flex w-5/6 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none"
                   type="text"
                   placeholder="Enter some data..."
                   value={inputValue}
@@ -111,7 +111,7 @@ export default function Home() {
                 />
                 <button
                   type="submit"
-                  className="flex-none bg-purple-500 rounded-lg px-4 py-2 text-white font-semibold-focus:outline-none hover:bg-purple-600 transition-colors duration-300"
+                  className="flex-none bg-blue-900 rounded-lg px-4 py-2 text-white font-semibold-focus:outline-none hover:bg-purple-600 transition-colors duration-300"
                 >
                   Send
                 </button>
