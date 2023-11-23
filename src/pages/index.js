@@ -57,6 +57,7 @@ export default function Home() {
         setIsLoading(false);
       });
   };
+  return(<div>Under Maintanence!!!</div>)
   return (
     <div className="bg-indigo-50 flex flex-col">
       <div className="flex h-[calc(100dvh)] flex-col items-center">
