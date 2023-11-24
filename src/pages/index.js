@@ -1,13 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
-import styles from "@/styles/Home.module.css";
 import axios from "axios";
-import TypingAnimation from "@/components/TypingAnimation";
-
+import TypingAnimation from "../components/TypingAnimation";
 const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [chatLog, setChatLog] = useState([]);
@@ -58,14 +53,14 @@ export default function Home() {
       });
   };
   return (
-    <div className="bg-indigo-50 flex flex-col">
+    <div className="bg-gradient-to-r from-gray-900 to-blue-400 flex flex-col">
       <div className="flex h-[calc(100dvh)] flex-col items-center">
-        <div className="flex top-0 left-0 right-0 w-full xl:w-96 md:w-96 2xl:w-96 bg-gray-900">
+        <div className="flex top-0 left-0 right-0 w-full xl:w-[900px] md:w-[700px] 2xl:w-[1100px] bg-gray-900">
           <h1 className="bg-gradient-to-r from-blue-500 to-red-500 text-center text-transparent bg-clip-text w-screen py-3 font-bold text-6xl">
             botAI
           </h1>
         </div>
-        <div className="flex-1 overflow-y-auto w-full xl:w-96 md:w-96 2xl:w-96 bg-gray-900">
+        <div className="flex-1 overflow-y-auto w-full xl:w-[900px] md:w-[700px] 2xl:w-[1100px] bg-gray-900">
           <div className="flex items-center mb-4">
             <div className="flex-1 space-y-4 pl-6 pr-6 text-white">
               {/* flex space-y-4 grow overflow-y-auto flex-col p-6 pt-24 max-h-[screen] bg-gray-900 */}
@@ -96,7 +91,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="flex w-full xl:w-96 md:w-96 2xl:w-96">
+        <div className="flex w-full xl:w-[900px] md:w-[700px] 2xl:w-[1100px]">
           <div className="flex-1 bottom-0 left-0 right-0 p-2 pt-1 bg-gray-900">
             <form onSubmit={handleSubmit}>
               <div className="flex space-x-2 rounded-lg border border-gray-900">
