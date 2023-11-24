@@ -95,7 +95,7 @@ export default function Home() {
             <form onSubmit={handleSubmit}>
               <div className="flex space-x-2 rounded-lg border border-gray-900">
                 <input
-                  className="flex w-5/6 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none"
+                  className="flex-1 w-5/6 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none"
                   type="text"
                   placeholder="Message..."
                   value={inputValue}
