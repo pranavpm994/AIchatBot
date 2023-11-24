@@ -97,7 +97,7 @@ export default function Home() {
                 <input
                   className="flex w-5/6 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none"
                   type="text"
-                  placeholder="Enter some data..."
+                  placeholder="Message..."
                   value={inputValue}
                   onChange={(e) => {
                     setInputValue(e.target.value);
