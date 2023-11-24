@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   } 
   else if(process.env.NODE_ENV !=="development"){
     if(!referer || referer!==process.env.APP_URL){
-      res.status(409).json({message:"Unauthorized!!!"});
+      res.status(401).json({message:"Unauthorized!!!"});
     }
   }
   else {
