@@ -37,7 +37,6 @@ export default function Home() {
       .post(url, data)
       .then((response) => {
         setResponseMsg(response.data.choices[0].message.content);
-        console.log(response);
         setChatLog((prevChatLog) => [
           ...prevChatLog,
           {
